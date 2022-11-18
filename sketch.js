@@ -1,5 +1,8 @@
 var chao = 300;
-var hp = chao;
+var hpIni = chao-23; 
+var hp = hpIni;
+var hCactus = chao - 15;
+var xCactus = 700;
 
 var velocidaPuloIni = 20;
 var aceleracao = 1;
@@ -18,11 +21,16 @@ function draw() {
     velocidaPulo = velocidaPulo - aceleracao
     if (hp > chao ){
       pulo = false;
-      hp = chao; 
+      hp = hpIni; 
       velocidaPulo = velocidaPuloIni;
     }
   }
-  ellipse(30,hp,30,50);
+  line(0,chao,600,chao);
+  ellipse(60,hp,30,50);
+  
+  xCactus = xCactus - 5;
+  circle(xCactus,hCactus,30);
+
 }
 
 function keyPressed() {
