@@ -1,2 +1,2 @@
-# dino_game_lop
-Jogo didático 
+# Dino Game
+Jogo didático para aprender Lógica de Programação  
