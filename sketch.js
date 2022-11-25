@@ -7,6 +7,8 @@ var vtXCactus = [];
 var qtCactus = 3;
 var xJogador = 60;
 var vidas = 3; 
+var dinoSheet; 
+var dinoImg;
 
 var velocidaPuloIni = 24;
 var aceleracao = 3;
@@ -15,7 +17,12 @@ var pulo = false;
 
 var tela = 0; 
 
+function preload(){
+  dinoSheet = loadImage('imagens/dino.png')
+}
+
 function setup() {
+
   frameRate(30)
   createCanvas(600, 500);
   for ( i=0; i<qtCactus; i++){
@@ -42,6 +49,7 @@ function telaJogo () {
   line(0,chao,600,chao);
   // jogador 
   ellipse(xJogador,hp,30,50);
+  image(dinoSheet,xJogador-46,hp-50,93,100,100,50,93,100);
    
   // obstáculo 
   for (i=0; i<qtCactus; i++){
@@ -64,7 +72,7 @@ function telaJogo () {
     circle(vtXCactus[i],hCactus,30);
 
   }
-
+  
 }
 
 function telaFimJogo () {
